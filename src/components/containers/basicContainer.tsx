@@ -82,7 +82,7 @@ const BasicContainer = () => {
         label="Input"
         inputValue="0.0000"
         setInputValue={(value) => console.log(value)}
-        tokenInfo={["SUI", "BUCK", "USDC", "USDT"]}
+        tokenInfo={["SUI"]}
         canSelectToken={true}
         selectedToken={selectedToken}
         setSelectedToken={setSelectedToken}
