@@ -17,8 +17,9 @@ export default function Home() {
       )}
     >
       {/* <Header /> */}
-      <SideBarLayout><BasicContainer/></SideBarLayout>
-      <Footer />
+      <SideBarLayout><BasicContainer/><Footer /></SideBarLayout>
+      
+      
     </main>
   );
 }
