@@ -11,6 +11,7 @@ import {
 import { Transaction } from "@mysten/sui/transactions";
 import { AppContext } from "@/context/AppContext";
 import { toast } from "react-toastify";
+import ConnectWallet from "../wallet/connect-wallet";
 
 const BasicContainer = () => {
   const { walletAddress, suiName } = useContext(AppContext);
@@ -69,33 +70,34 @@ const BasicContainer = () => {
     );
   }
 
-  return (
-    <div className="w-[80%] flex flex-col items-center justify-center gap-4">
-      <BasicDataField
-        label="Your Wallet Balance"
-        value={userBalance ?? "0.0000"}
-        spaceWithUnit
-        unit="SUI"
-        minFractionDigits={0}
-      />
-      <BasicInputField
-        label="Input"
-        inputValue="0.0000"
-        setInputValue={(value) => console.log(value)}
-        tokenInfo={["SUI"]}
-        canSelectToken={true}
-        selectedToken={selectedToken}
-        setSelectedToken={setSelectedToken}
-        maxValue={0.0}
-      />
-      <ActionButton
-        label="Get Buck"
-        isConnected={true}
-        isLoading={false}
-        onClick={handleTx}
-        buttonClass="w-40"
-      />
-    </div>
+  return ( 
+    <div className="w-[100%] flex flex-col items-center justify-center gap-4">
+    <ConnectWallet></ConnectWallet>
+    <BasicDataField
+      label="Your Wallet Balance"
+      value={userBalance ?? "0.0000"}
+      spaceWithUnit
+      unit="SUI"
+      minFractionDigits={0}
+    />
+    <BasicInputField
+      label="Input"
+      inputValue="0.0000"
+      setInputValue={(value) => console.log(value)}
+      tokenInfo={["SUI"]}
+      canSelectToken={true}
+      selectedToken={selectedToken}
+      setSelectedToken={setSelectedToken}
+      maxValue={0.0}
+    />
+    <ActionButton
+      label="Get Buck"
+      isConnected={true}
+      isLoading={false}
+      onClick={handleTx}
+      buttonClass="w-40"
+    />
+    </div>  
   );
 };
 

@@ -3,6 +3,8 @@ import { cn } from "@/lib/utils";
 import Header from "@/components/header";
 import BasicContainer from "@/components/containers/basicContainer";
 import Footer from "@/components/footer";
+import SideBarLayout from "@/components/sidebar/sidebar-layout"
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,8 +16,8 @@ export default function Home() {
         inter.className
       )}
     >
-      <Header />
-      <BasicContainer />
+      {/* <Header /> */}
+      <SideBarLayout><BasicContainer/></SideBarLayout>
       <Footer />
     </main>
   );
