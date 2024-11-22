@@ -10,37 +10,28 @@ import {
     SidebarMenuItem
   } from "@/components/ui/sidebar"
 import { title } from "process"
-import { LayoutDashboardIcon, Layers, Link, Calculator, Settings, Handshake  } from "lucide-react"
+import Link from "next/link" 
+import { LayoutDashboardIcon, Layers, Settings, HouseIcon } from "lucide-react"
 
   const items = [
     {
+      title: "Home",
+      url:"/",
+      icon : HouseIcon,
+    },
+    {
       title: "Dashboard",
-      url:"#",
+      url:"/dashboard",
       icon : LayoutDashboardIcon,
     },
     {
       title: "Stake",
-      url:"#",
+      url:"/stake",
       icon : Layers,
     },
     {
-      title: "Referral",
-      url:"#",
-      icon : Handshake,
-    },
-    {
-      title: "Bond",
-      url:"#",
-      icon : Link,
-    },
-    {
-      title: "Calculator",
-      url:"#",
-      icon : Calculator,
-    },
-    {
       title: "Setting",
-      url:"#",
+      url:"/setting",
       icon : Settings,
     },
   ]
@@ -61,10 +52,10 @@ import { LayoutDashboardIcon, Layers, Link, Calculator, Settings, Handshake  } f
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

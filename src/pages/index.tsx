@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
-import Header from "@/components/header";
 import BasicContainer from "@/components/containers/basicContainer";
 import Footer from "@/components/footer";
 import SideBarLayout from "@/components/sidebar/sidebar-layout"
@@ -17,9 +16,7 @@ export default function Home() {
       )}
     >
       {/* <Header /> */}
-      <SideBarLayout><BasicContainer/><Footer /></SideBarLayout>
-      
-      
+      <SideBarLayout><div className="w-[100%] flex justify-center content-center"><BasicContainer/></div><Footer /></SideBarLayout>
     </main>
   );
 }

@@ -71,7 +71,7 @@ const BasicContainer = () => {
   }
 
   return ( 
-    <div className="w-[50%] flex flex-col items-center gap-4 self-center">
+    <div className="w-[1000px] flex flex-col items-center gap-4 self-center">
     <ConnectWallet></ConnectWallet>
     <BasicDataField
       label="Your Wallet Balance"

@@ -7,7 +7,7 @@ export default function SideBarLayout({ children }: { children: React.ReactNode 
     <SidebarProvider>
       <AppSidebar /> 
       <SidebarTrigger />
-      <main className="w-[100%] flex justify-center content-center">
+      <main className="w-[100%] flex">
         {children}
       </main>
     </SidebarProvider>
