@@ -1,37 +1,27 @@
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
-import SideBarLayout from "@/components/sidebar/sidebar-layout";
-import { Separator } from "@/components/ui/separator";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import BasicContainer from "@/components/containers/basicContainer";
+import Footer from "@/components/footer";
+import SideBarLayout from "@/components/sidebar/sidebar-layout"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@radix-ui/react-dropdown-menu";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Stake() {
   return (
-    <SideBarLayout>
-      <div
-        className={cn(
-          "relative w-full min-h-screen h-full flex flex-col items-center justify-center mx-auto py-5 px-4",
-          inter.className
-        )}
-      >
-        <h1 className="text-white text-3xl md:text-6xl font-bold p-6 text-center">
-          Stake
-        </h1>
-        <div className="flex flex-col gap-6 justify-center h-full w-full">
+    <main
+      className={cn(
+        "relative w-full min-h-svh h-full max-w-360 flex flex-col items-center justify-center mx-auto py-5 px-4",
+        inter.className
+      )}
+    >
+      {/* <Header /> */}
+      <SideBarLayout> 
+        <h1 className="absolute top-10 md:top-4  text-white text-3xl md:text-6xl font-bold p-6">Stake</h1>
+      <div className="flex flex-col gap-6 justify-center h-full w-full mt-[25%] md:mt-[30px] md:ml-[2%]">
           <Card className="flex flex-col gap-4 bg-zinc-800 w-full max-w-6xl mx-auto">
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
@@ -137,8 +127,7 @@ export default function Stake() {
               </CardContent>
             </Card>
           </div>
-        </div>
-      </div>
-    </SideBarLayout>
+        </div></SideBarLayout>
+    </main>
   );
 }
