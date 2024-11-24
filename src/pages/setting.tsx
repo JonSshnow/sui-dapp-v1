@@ -1,5 +1,5 @@
 
-import { Inter } from "next/font/google";
+import { Inter, Raleway } from "next/font/google";
 import { cn } from "@/lib/utils";
 import SideBarLayout from "@/components/sidebar/sidebar-layout";
 import {
@@ -12,14 +12,14 @@ import {
   } from "@/components/ui/card"
   
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Raleway({ subsets: ["latin"] });
 
 export default function Setting(){
     return(
         <main
         className={cn(
-        "relative w-full min-h-svh h-full max-w-360 mx-auto py-5 px-4",
-        inter.className
+        "relative w-full min-h-svh h-full max-w-360 mx-auto py-5 px-4 bg-gradient-to-r from-[#4ca2ff] to-white",
+        font.className
         )}>
         <SideBarLayout>
             <h1 className="absolute top-10 md:top-4  text-white text-3xl md:text-6xl font-bold p-6">Settings</h1>

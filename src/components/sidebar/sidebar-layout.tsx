@@ -4,6 +4,7 @@ import { Children } from "react"
 import ConnectWallet from "../wallet/connect-wallet"
  
 export default function SideBarLayout({ children }: { children: React.ReactNode }) {
+  
   return (
     <SidebarProvider>
       <AppSidebar /> 

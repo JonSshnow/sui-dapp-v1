@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import {
     Sidebar,
     SidebarContent,
@@ -7,7 +8,8 @@ import {
     SidebarHeader,
     SidebarMenu,
     SidebarMenuButton,
-    SidebarMenuItem
+    SidebarMenuItem,
+    useSidebar
   } from "@/components/ui/sidebar"
 import { title } from "process"
 import Link from "next/link" 
@@ -35,15 +37,27 @@ import { LayoutDashboardIcon, Layers, Settings, HouseIcon } from "lucide-react"
       icon : Settings,
     },
   ]
-   
+ 
   export function AppSidebar() {
+    const {
+      state,
+      open,
+      setOpen,
+      openMobile,
+      setOpenMobile,
+      isMobile,
+      toggleSidebar,
+    } = useSidebar()
+    console.log(state)
     return (
-      <Sidebar>
-        <SidebarHeader>
-        <span className="text-xl lg:text-4xl font-extrabold">
-          Suitzerland
-        </span>
-        </SidebarHeader>
+      <Sidebar collapsible="icon">
+        {useSidebar().state === 'expanded' && (
+          <SidebarHeader>
+            <span className="text-xl lg:text-4xl font-extrabold mt-[15px]">
+              Suitzerland
+            </span>
+          </SidebarHeader>
+        )}
         <SidebarContent>
           <SidebarGroup>
             <SidebarGroupLabel>Menu</SidebarGroupLabel>

@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, Raleway } from "next/font/google";
 import { cn } from "@/lib/utils";
 import BasicContainer from "@/components/containers/basicContainer";
 import Footer from "@/components/footer";
@@ -8,14 +8,14 @@ import { Separator } from "@radix-ui/react-dropdown-menu";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
 
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Raleway({ subsets: ["latin"] });
 
 export default function Stake() {
   return (
     <main
       className={cn(
-        "relative w-full min-h-svh h-full max-w-360 flex flex-col items-center justify-center mx-auto py-5 px-4",
-        inter.className
+        "relative w-full min-h-svh h-full max-w-360 flex flex-col items-center justify-center mx-auto py-5 px-4 bg-gradient-to-r from-[#4ca2ff] to-white",
+        font.className
       )}
     >
       {/* <Header /> */}
