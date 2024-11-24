@@ -2,6 +2,8 @@
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import SideBarLayout from "@/components/sidebar/sidebar-layout";
+import { Separator } from "@/components/ui/separator"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
     Card,
     CardContent,
@@ -23,34 +25,92 @@ export default function Stake(){
         )}>
         <SideBarLayout>
             <h1 className="text-white text-3xl md:text-6xl font-bold p-6">Stake</h1>
-            <div className="flex flex-col gap-6 justify-center">
-            <Card className="w-[600px] flex flex-col gap-4 self-center bg-zinc-800 ml-60">
-                <CardHeader>
-                    <CardTitle>Card 1 </CardTitle>
-                    <CardDescription></CardDescription>
-                </CardHeader>
+            <div className="flex flex-col gap-6 justify-center h-full w-full">
+            <Card className="flex flex-col gap-4 bg-zinc-800 w-[1228px]">
                 <CardContent>
-                    <p></p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                        <div className="text-center">
+                            <p className="text-xs text-gray-400">Test</p>
+                            <p className="text-4xl font-semibold">%</p>
+                        </div>
+                        <div className="text-center">
+                            <p className="text-xs text-gray-400">Test</p>
+                            <p className="text-4xl font-semibold">%</p>
+                        </div>
+                        <div className="text-center">
+                            <p className="text-xs text-gray-400">Test</p>
+                            <p className="text-4xl font-semibold">%</p>
+                        </div>
+                    </div>
                 </CardContent>
             </Card>
-            <Card className="w-[600px] flex flex-col gap-4 self-center bg-zinc-800 ml-60">
+            <div className="flex flex-wrap gap-6">
+            <Card className="flex flex-wrap flex-col bg-zinc-800 w-[700px]">
                 <CardHeader>
-                    <CardTitle>Staking</CardTitle>
-                    <CardDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero laboriosam voluptate laudantium. Facere quisquam unde cupiditate aliquid assumenda, molestias velit adipisci accusamus cum. Modi id cumque aperiam beatae earum excepturi.</CardDescription>
+                    <CardTitle className="text-3xl font-semibold">SUI Staking</CardTitle>
+                    <CardDescription className="text-sm text-gray-400">Whatever time you want</CardDescription>
                 </CardHeader>
-                <CardContent>
-                    <p></p>
+                <CardContent className="flex flex-wrap">
+                        <Tabs defaultValue="account" className="w-[650px]">
+                            <TabsList className="flex justify-center">
+                                <TabsTrigger value="stake" className="text-lg">Stake</TabsTrigger>
+                                <TabsTrigger value="reward" className="text-lg">Reward</TabsTrigger>
+                                <TabsTrigger value="compound" className="text-lg">Compound</TabsTrigger>
+                            </TabsList>
+                            <div  className="flex justify-start hidden">
+                                <TabsContent value="stake">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nemo ipsa non harum quos totam. Sequi aperiam obcaecati perferendis ipsum est suscipit eum explicabo, quo fugiat cum excepturi assumenda facere.</TabsContent>
+                                <TabsContent value="reward">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, corporis illo similique blanditiis, quod fugiat sapiente explicabo hic officiis in, impedit nemo cumque nihil consequuntur? Atque enim dignissimos provident commodi.</TabsContent>
+                                <TabsContent value="compound">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, corporis illo similique blanditiis, quod fugiat sapiente explicabo hic officiis in, impedit nemo cumque nihil consequuntur? Atque enim dignissimos provident commodi.</TabsContent>                        
+                            </div>
+                            </Tabs>            
                 </CardContent>
+                <CardFooter className="flex justify-center text-sm text-gray-400 mt-3">Connect to your wallet to stake SUI tokens !</CardFooter>
             </Card>
-            <Card className="w-[600px] flex flex-col gap-4 self-center bg-zinc-800 ml-60">
+            <Card className="bg-zinc-800 w-[500px]">
                 <CardHeader>
                     <CardTitle>Balances</CardTitle>
-                    <CardDescription>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus beatae odio eveniet officiis sit cumque, maxime animi saepe impedit voluptates cum illo omnis eius iusto quia? Rem molestias nihil quia.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <p></p>
+                    <div className="mb-4 flex items-center justify-between gap-2">
+                        <div className="text-sky-350">Your Balance</div>
+                        <div className="whitespace-nowrap text-right font-bold">0
+                            <span className="text-white/60 font-normal"> $SUI</span>
+                        </div>
+                    </div>
+                    <div className="mb-4 flex items-center justify-between gap-2">
+                        <div className="text-sky-350">Your Stacked Balance</div>
+                        <div className="whitespace-nowrap text-right font-bold">0
+                            <span className="text-white/60 font-normal"> $SUI</span>
+                        </div>
+                    </div>
+                    <div className="mb-4 flex items-center justify-between gap-2">
+                        <div className="text-sky-350">Next Epoch Reward</div>
+                        <div className="whitespace-nowrap text-right font-bold">0
+                            <span className="text-white/60 font-normal"> $SUI</span>
+                        </div>
+                    </div>
+                    <div className="flex items-center justify-between gap-2">
+                        <div className="text-sky-350">Next Epoch Yield</div>
+                        <div className="whitespace-nowrap text-right font-bold">0
+                            <span className="text-white/60 font-normal">%</span>
+                        </div>
+                    </div>
+                    <Separator className="my-6 bg-gray-400"/>
+                    <div className="mb-4 flex items-center justify-between gap-2">
+                        <div className="text-sky-350">Claimed Rewards</div>
+                        <div className="whitespace-nowrap text-right font-bold">0
+                            <span className="text-white/60 font-normal"> $SUI</span>
+                        </div>
+                    </div>
+                    <div className="flex items-center justify-between gap-2">
+                        <div className="text-sky-350">Lock time remaining</div>
+                        <div className="whitespace-nowrap text-right font-bold">
+                            No Lyte Stacked
+                        </div>
+                    </div>
                 </CardContent>
             </Card>
+            </div>
             </div>
         </SideBarLayout>
         </main>

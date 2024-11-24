@@ -1,6 +1,7 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/sidebar/app-sidebar"
 import { Children } from "react"
+import ConnectWallet from "../wallet/connect-wallet"
  
 export default function SideBarLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -8,6 +9,7 @@ export default function SideBarLayout({ children }: { children: React.ReactNode 
       <AppSidebar /> 
       <SidebarTrigger />
       <main className="w-[100%] flex">
+      <ConnectWallet></ConnectWallet>
         {children}
       </main>
     </SidebarProvider>

@@ -10,6 +10,7 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
+import BasicContainer from "@/components/containers/basicContainer";
   
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,16 +23,8 @@ export default function Dashboard(){
         inter.className
         )}>
         <SideBarLayout>
-            <h1 className="text-white text-3xl md:text-6xl font-bold p-6">DashBoard</h1>
-            <Card className="w-[600px] flex flex-col gap-4 self-center bg-zinc-800 ml-60">
-                <CardHeader>
-                    <CardTitle>Dashboard</CardTitle>
-                    <CardDescription>WIP</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <p></p>
-                </CardContent>
-            </Card>
+            <h1 className="text-white text-3xl md:text-6xl font-bold p-6">Dashboard</h1>
+            <BasicContainer/>
         </SideBarLayout>
         </main>
     );

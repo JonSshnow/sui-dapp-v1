@@ -16,7 +16,7 @@ export default function Home() {
       )}
     >
       {/* <Header /> */}
-      <SideBarLayout><div className="w-[100%] flex justify-center content-center"><BasicContainer/></div><Footer /></SideBarLayout>
+      <SideBarLayout> <h1 className="text-white text-3xl md:text-6xl font-bold p-8">Welcome to Suitzerland</h1><p className="flex flex-col justify-center ml">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos est similique itaque quod ipsum maxime accusantium! Animi, recusandae, dolorum autem perspiciatis nemo sequi voluptatum velit provident delectus est nesciunt ipsam.</p></SideBarLayout>
     </main>
   );
 }
