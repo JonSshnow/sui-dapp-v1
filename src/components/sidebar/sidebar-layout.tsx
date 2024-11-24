@@ -9,7 +9,9 @@ export default function SideBarLayout({ children }: { children: React.ReactNode 
       <AppSidebar /> 
       <SidebarTrigger />
       <main className="w-[100%] flex">
-      <ConnectWallet></ConnectWallet>
+      <div className="w-full flex justify-center lg:absolute lg:top-5 lg:right-5 mb-4 lg:mb-0">
+        <ConnectWallet/>
+      </div>
         {children}
       </main>
     </SidebarProvider>
