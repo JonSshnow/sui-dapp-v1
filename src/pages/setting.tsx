@@ -10,6 +10,7 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
+import Header from "@/components/header";
   
 
 const font = Raleway({ subsets: ["latin"] });
@@ -21,7 +22,7 @@ export default function Setting(){
         "relative w-full min-h-svh h-full max-w-360 mx-auto py-5 px-4 bg-gradient-to-r from-[#fbfdf3] to-[#8dd8e6]",
         font.className
         )}>
-        <SideBarLayout>
+            <Header />
             <h1 className="absolute top-10 md:top-4 text-[#646262] text-3xl md:text-6xl font-bold p-6">Settings</h1>
             <div className="flex flex-col gap-6 justify-center h-full w-full mt-[1%] md:mt-[30px] md:ml-[2%]">
             <Card className="flex flex-col gap-4 bg-white w-[60%] max-w-6xl mx-auto">
@@ -34,7 +35,6 @@ export default function Setting(){
                 </CardContent>
             </Card>
             </div>
-        </SideBarLayout>
         </main>
     );
 }

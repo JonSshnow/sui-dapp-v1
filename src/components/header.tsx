@@ -7,11 +7,35 @@ import { ConnectModal } from "@mysten/dapp-kit";
 import ConnectMenu from "./ui/connectMenu";
 import "@mysten/dapp-kit/dist/index.css";
 import { AppContext } from "@/context/AppContext";
-import { Link as LinkIcon } from "lucide-react";
+import { HouseIcon, Layers, LayoutDashboardIcon, Settings } from "lucide-react";
 import ConnectWallet from "./wallet/connect-wallet";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuLink, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 // import SlideInMenu from "./slideInMenu";
 // import RpcSetting from "./rpcSetting";
+
+const items = [
+  {
+    title: "Home",
+    url:"/",
+    icon : HouseIcon,
+  },
+  {
+    title: "Dashboard",
+    url:"/dashboard",
+    icon : LayoutDashboardIcon,
+  },
+  {
+    title: "Stake",
+    url:"/stake",
+    icon : Layers,
+  },
+  {
+    title: "Setting",
+    url:"/setting",
+    icon : Settings,
+  },
+]
 
 const Header = () => {
 
@@ -22,13 +46,8 @@ const Header = () => {
         WebkitBackdropFilter: "blur(1px)",
       }}
     >
-      <header className="w-full max-w-360 mx-auto h-20 flex items-center justify-between pt-5 pb-3 px-4 z-50">
-        {/* Logo Link */}
-        <span className="text-xl lg:text-4xl font-extrabold">
-          Suitzerland
-        </span>
-        {/* Connect Button */}
-        <ConnectWallet></ConnectWallet>
+      <header>
+        <ConnectWallet/>
       </header>
     </div>
   );

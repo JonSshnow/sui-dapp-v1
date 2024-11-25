@@ -6,6 +6,7 @@ import SideBarLayout from "@/components/sidebar/sidebar-layout"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@radix-ui/react-dropdown-menu";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
+import Header from "@/components/header";
 
 
 const font = Raleway({ subsets: ["latin"] });
@@ -18,9 +19,8 @@ export default function Stake() {
         font.className
       )}
     >
-      {/* <Header /> */}
-      <SideBarLayout> 
-        <h1 className="absolute top-10 md:top-4  text-[#646262] text-3xl md:text-6xl font-bold p-6">Stake</h1>
+      <Header />
+      <h1 className="absolute top-10 md:top-4  text-[#646262] text-3xl md:text-6xl font-bold p-6">Stake</h1>
       <div className="flex flex-col gap-6 justify-center h-full w-full mt-[25%] md:mt-[30px] md:ml-[2%]">
           <Card className="flex flex-col gap-4 bg-white w-full max-w-6xl mx-auto">
             <CardContent>
@@ -127,7 +127,7 @@ export default function Stake() {
               </CardContent>
             </Card>
           </div>
-        </div></SideBarLayout>
+        </div>
     </main>
   );
 }

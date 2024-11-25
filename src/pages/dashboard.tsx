@@ -11,6 +11,7 @@ import {
     CardTitle,
   } from "@/components/ui/card"
 import BasicContainer from "@/components/containers/basicContainer";
+import Header from "@/components/header";
   
 
 const font = Raleway({ subsets: ["latin"] });
@@ -22,7 +23,7 @@ export default function Dashboard(){
         "relative w-full min-h-svh h-full max-w-360 mx-auto py-5 px-4 bg-gradient-to-r from-[#fbfdf3] to-[#8dd8e6]",
         font.className
         )}>
-        <SideBarLayout>
+        <Header />
         <h1 className="absolute top-10 md:top-4 text-[#646262] text-3xl md:text-4xl lg:text-6xl font-bold p-6">Dashboard</h1>
             {/* <BasicContainer/> */}
             <div className="flex flex-col gap-6 py-6 h-full w-full mt-[25%] md:mt-[30px] md:ml-[2%] justify-center">
@@ -100,7 +101,6 @@ export default function Dashboard(){
                     </div>
                 </div>
             </div>
-        </SideBarLayout>
         </main>
     );
 }
