@@ -48,7 +48,6 @@ import { LayoutDashboardIcon, Layers, Settings, HouseIcon } from "lucide-react"
       isMobile,
       toggleSidebar,
     } = useSidebar()
-    console.log(state)
     return (
       <Sidebar collapsible="icon">
         {useSidebar().state === 'expanded' && (

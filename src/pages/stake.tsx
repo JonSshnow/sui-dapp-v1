@@ -54,13 +54,13 @@ export default function Stake() {
               <CardContent>
                 <Tabs defaultValue="account" className="w-full">
                   <TabsList className="flex justify-center gap-4 text-[#646262]">
-                    <TabsTrigger value="stake" className="text-lg">
+                    <TabsTrigger value="stake" className="text-lg bg-gray-100 w-[100px] hover:bg-cyan-100 active:bg-cyan-300 active:ring active:ring-cyan-400 focus:bg-gray-300 rounded-full">
                       Stake
                     </TabsTrigger>
-                    <TabsTrigger value="reward" className="text-lg">
+                    <TabsTrigger value="reward" className="text-lg bg-gray-100 w-[100px] hover:bg-cyan-100 active:bg-cyan-300 active:ring active:ring-cyan-400 focus:bg-gray-300 rounded-full">
                       Reward
                     </TabsTrigger>
-                    <TabsTrigger value="compound" className="text-lg">
+                    <TabsTrigger value="compound" className="text-md bg-gray-100 w-[100px] hover:bg-cyan-100 active:bg-cyan-300 active:ring active:ring-cyan-400 focus:bg-gray-300 rounded-full">
                       Compound
                     </TabsTrigger>
                   </TabsList>
@@ -111,7 +111,7 @@ export default function Stake() {
                     0<span className="text-[#70bbc9] font-normal">%</span>
                   </div>
                 </div>
-                <Separator className="my-6 bg-gray-400" />
+                <Separator className="my-6 text-gray-800" />
                 <div className="mb-4 flex items-center justify-between gap-2">
                   <div className="text-gray-400">Claimed Rewards</div>
                   <div className="whitespace-nowrap text-right text-[#646262] font-bold">
