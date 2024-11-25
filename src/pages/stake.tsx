@@ -90,19 +90,19 @@ export default function Stake() {
                 <div className="mb-4 flex items-center justify-between gap-2">
                   <div className="text-gray-400">Your Balance</div>
                   <div className="whitespace-nowrap text-right text-[#646262] font-bold">
-                    0<span className="font-normal text-[#70bbc9]"> $SUI</span>
+                    0<span className="font-normal text-[#70bbc9]"> $STZ</span>
                   </div>
                 </div>
                 <div className="mb-4 flex items-center justify-between gap-2">
                   <div className="text-gray-400">Your Staked Balance</div>
                   <div className="whitespace-nowrap text-right text-[#646262] font-bold">
-                    0<span className="font-normal text-[#70bbc9]"> $SUI</span>
+                    0<span className="font-normal text-[#70bbc9]"> $STZ</span>
                   </div>
                 </div>
                 <div className="mb-4 flex items-center justify-between gap-2">
                   <div className="text-gray-400">Next Epoch Reward</div>
                   <div className="whitespace-nowrap text-right text-[#646262] font-bold">
-                    0<span className="font-normal text-[#70bbc9]"> $SUI</span>
+                    0<span className="font-normal text-[#70bbc9]"> $STZ</span>
                   </div>
                 </div>
                 <div className="flex items-center justify-between gap-2">
@@ -115,7 +115,7 @@ export default function Stake() {
                 <div className="mb-4 flex items-center justify-between gap-2">
                   <div className="text-gray-400">Claimed Rewards</div>
                   <div className="whitespace-nowrap text-right text-[#646262] font-bold">
-                    0<span className="text-[#70bbc9] font-normal"> $SUI</span>
+                    0<span className="text-[#70bbc9] font-normal"> $STZ</span>
                   </div>
                 </div>
                 <div className="flex items-center justify-between gap-2">
