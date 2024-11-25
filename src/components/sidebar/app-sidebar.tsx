@@ -53,7 +53,7 @@ import { LayoutDashboardIcon, Layers, Settings, HouseIcon } from "lucide-react"
       <Sidebar collapsible="icon">
         {useSidebar().state === 'expanded' && (
           <SidebarHeader>
-            <span className="text-xl lg:text-4xl font-extrabold mt-[15px]">
+            <span className="text-xl lg:text-4xl font-extrabold mt-[10px] text-[#646262]">
               Suitzerland
             </span>
           </SidebarHeader>
