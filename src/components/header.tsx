@@ -9,7 +9,6 @@ import "@mysten/dapp-kit/dist/index.css";
 import { AppContext } from "@/context/AppContext";
 import { HouseIcon, Layers, LayoutDashboardIcon, Settings } from "lucide-react";
 import ConnectWallet from "./wallet/connect-wallet";
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuLink, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 // import SlideInMenu from "./slideInMenu";
 // import RpcSetting from "./rpcSetting";
@@ -47,7 +46,16 @@ const Header = () => {
       }}
     >
       <header>
-        <ConnectWallet/>
+        <div className="navbar bg-base-100 shadow-md">
+          <div className="navbar-start">
+          <span className="text-xl md:text-3xl font-extrabold mt-[2px] text-[#646262]">
+              Suitzerland
+            </span>
+          </div>
+          <div className="navbar-end">
+            <ConnectWallet/>
+          </div>
+        </div>
       </header>
     </div>
   );

@@ -10,14 +10,14 @@ const ConnectWallet = () => {
   const { walletAddress, suiName } = useContext(AppContext);
 
   return (
-    <div className="absolute top-4 right-4 md:top-6 md:right-6 z-50 flex flex-wrap">
+    <div className="absolute z-50 flex flex-wrap ">
       {walletAddress ? (
         <ConnectMenu walletAddress={walletAddress} suiName={suiName} />
       ) : (
         <ConnectModal
           trigger={
             <button
-              className="h-full w-auto rounded-lg md:rounded-xl outline-none ring-0 bg-white hover:from-blue-400 hover:to-purple-500 transition-all duration-300 p-[1px]"
+              className="h-full w-auto rounded-lg md:rounded-xl outline-none ring-0 bg-gray-100 hover:bg-cyan-100 active:bg-cyan-300 active:ring active:ring-cyan-400 focus:bg-gray-300 rounded-full transition-all duration-300 p-[1px]"
               disabled={!!walletAddress}
             >
               <div className="h-full px-4 py-2 sm:px-5 sm:py-3 flex items-center gap-2 rounded-lg md:rounded-xl bg-white/10">
