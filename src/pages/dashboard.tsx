@@ -23,10 +23,11 @@ export default function Dashboard(){
             "relative w-full min-h-svh h-full max-w-360 flex flex-col items-center justify-center mx-auto py-5 px-4 bg-gradient-to-r from-[#fbfdf3] to-[#8dd8e6]",
             /* font.className */
         )}>
-        <Header />
-        <h1 className="absolute top-20 md:top-24 text-[#646262] text-3xl md:text-6xl font-bold p-6">Dashboard</h1>
+{/*         <video autoPlay loop muted playsInline className="absolute w-full h-full bg-transparent object-cover"><source src="snowFall.mp4" type="video/mp4"></source></video>
+ */}        <Header />
+        <h1 className="absolute hidden text-[#646262] md:flex md:top-24 md:text-6xl font-bold p-6">Dashboard</h1>
             {/* <BasicContainer/> */}
-            <div className="flex flex-col gap-6 py-6 h-full w-full mt-[50%] md:mt-[50px] md:ml-[30%] justify-center">
+            <div className="flex flex-col gap-6 py-6 h-full w-full mt-[25%] md:mt-[50px] md:ml-[30%] justify-center">
                 <div className="bg-white rounded-2xl max-w-6xl">
                     <div className="mx-auto max-w-7xl">
                         <div className="grid grid-cols-1 gap-px bg-[#646262]/5 sm:grid-cols-2 lg:grid-cols-4 rounded-2xl shadow-md">

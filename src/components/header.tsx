@@ -7,7 +7,7 @@ import { ConnectModal } from "@mysten/dapp-kit";
 import ConnectMenu from "./ui/connectMenu";
 import "@mysten/dapp-kit/dist/index.css";
 import { AppContext } from "@/context/AppContext";
-import { HouseIcon, Layers, LayoutDashboardIcon, Settings } from "lucide-react";
+import { HouseIcon, Layers, LayoutDashboardIcon, Settings, Plus } from "lucide-react";
 import ConnectWallet from "./wallet/connect-wallet";
 
 // import SlideInMenu from "./slideInMenu";
@@ -30,7 +30,7 @@ const items = [
     icon : Layers,
   },
   {
-    title: "Setting",
+    title: "Settings",
     url:"/setting",
     icon : Settings,
   },
@@ -46,12 +46,37 @@ const Header = () => {
       }}
     >
       <header>
-        <div className="navbar bg-base-100 shadow-md">
+        <div className="navbar bg-transparent shadow-md">
           <div className="navbar-start">
-          <span className="text-xl md:text-3xl font-extrabold mt-[2px] text-[#646262]">
-              Suitzerland
+            <span className="text-xl hidden md:flex md:text-3xl font-extrabold mt-[2px] text-[#646262]">
+                Suitzerland
             </span>
+            <div className="mt-[5px] md:hidden">
+              <details>
+                <summary className="flex flex-col mb-3 size-6"><Plus/></summary>
+                <ul>
+                  {items.map(item =>(
+                    <li className="mb-3" key={item.title}>
+                      <Link href={item.url}>
+                        <p className="flex items-center gap-x-2 text-xs"><item.icon className="size-4"/>{item.title}</p>
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+              </details>
+            </div>
           </div>
+          <ul className="gap-7 mt-[5px] hidden md:flex">
+          {items.map(item =>(
+            <li key={item.title}>
+              <Link href={item.url}>
+                <div className="tooltip tooltip-bottom" data-tip={item.title}>
+                  <item.icon />
+                </div>
+              </Link>
+            </li>
+          ))}
+          </ul>
           <div className="navbar-end">
             <ConnectWallet/>
           </div>
