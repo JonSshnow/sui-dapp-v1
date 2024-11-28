@@ -16,10 +16,10 @@ export default function Stake() {
         /* font.className */
       )}
     > 
-      <Snowfall color="white" />
+      <Snowfall color="white" snowflakeCount={200} />
       <Header />
-      <h1 className="absolute hidden text-[#646262] md:flex md:top-24 md:text-6xl font-bold p-6">Stake</h1>
-      <div className="flex flex-col gap-6 justify-center h-full w-full mt-[25%] md:mt-[100px] md:ml-[2%]">
+      <h1 className="absolute hidden text-[#646262] lg:flex lg:top-24 lg:text-6xl font-bold p-6">Stake</h1>
+      <div className="flex flex-col gap-6 justify-center h-full w-full xl:w-[1100px] mt-[25%] md:mt-[100px]">
           <Card className="flex flex-col gap-4 bg-white w-full max-w-6xl mx-auto">
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useMeidaSize = () => {
+const useMediaSize = () => {
   const [width, setWidth] = useState<number>(0);
 
   useEffect(() => {
@@ -13,4 +13,4 @@ const useMeidaSize = () => {
   return width;
 };
 
-export default useMeidaSize;
+export default useMediaSize;

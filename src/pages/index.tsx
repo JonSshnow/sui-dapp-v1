@@ -18,9 +18,9 @@ export default function Home() {
         /* font.className */
       )}
     >
-    <Snowfall color="white" />  
+    <Snowfall color="white" snowflakeCount={200} />  
     <Header /> 
-      <h1 className="absolute top-48 md:top-32 text-[#646262] text-3xl md:text-xl lg:text-6xl font-bold p-6">Welcome to Suitzerland</h1>
+      <h1 className="absolute top-48 md:top-32 text-[#646262] text-3xl md:text-4xl lg:text-6xl font-bold p-6">Welcome to Suitzerland</h1>
       <p className="flex flex-col justify-center w-[80%]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos est similique itaque quod ipsum maxime accusantium! Animi, recusandae, dolorum autem perspiciatis nemo sequi voluptatum velit provident delectus est nesciunt ipsam.</p>
     </main>
   );
