@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Separator } from "@radix-ui/react-separator";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@radix-ui/react-tabs";
 import Header from "@/components/header";
+import Snowfall from "react-snowfall";
 
 
 /* const font = Raleway({ subsets: ["latin"] }); */
@@ -14,7 +15,8 @@ export default function Stake() {
         "relative w-full min-h-svh h-full max-w-360 flex flex-col items-center justify-center mx-auto py-5 px-4 bg-gradient-to-r from-[#fbfdf3] to-[#8dd8e6]",
         /* font.className */
       )}
-    >
+    > 
+      <Snowfall color="white" />
       <Header />
       <h1 className="absolute hidden text-[#646262] md:flex md:top-24 md:text-6xl font-bold p-6">Stake</h1>
       <div className="flex flex-col gap-6 justify-center h-full w-full mt-[25%] md:mt-[100px] md:ml-[2%]">

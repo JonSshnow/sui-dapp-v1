@@ -29,7 +29,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           <SuiWalletProvider>
             <AppContextProvider>
               <TooltipProvider>
-                <MetaTagsContainer />
                 <Component {...pageProps} className={cn(inter.className)} />
                 <ToastContainer
                   theme="dark"

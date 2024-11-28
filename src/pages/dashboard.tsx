@@ -1,17 +1,7 @@
 
-import { Inter, Raleway  } from "next/font/google";
 import { cn } from "@/lib/utils";
-import SideBarLayout from "@/components/sidebar/sidebar-layout";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-  } from "@/components/ui/card"
-import BasicContainer from "@/components/containers/basicContainer";
 import Header from "@/components/header";
+import Snowfall from "react-snowfall";
   
 
 /* const font = Raleway({ subsets: ["latin"] }); */
@@ -23,9 +13,9 @@ export default function Dashboard(){
             "relative w-full min-h-svh h-full max-w-360 flex flex-col items-center justify-center mx-auto py-5 px-4 bg-gradient-to-r from-[#fbfdf3] to-[#8dd8e6]",
             /* font.className */
         )}>
-{/*         <video autoPlay loop muted playsInline className="absolute w-full h-full bg-transparent object-cover"><source src="snowFall.mp4" type="video/mp4"></source></video>
- */}        <Header />
-        <h1 className="absolute hidden text-[#646262] md:flex md:top-24 md:text-6xl font-bold p-6">Dashboard</h1>
+            <Snowfall color="white" />
+            <Header />
+            <h1 className="absolute hidden text-[#646262] md:flex md:top-24 md:text-6xl font-bold p-6">Dashboard</h1>
             {/* <BasicContainer/> */}
             <div className="flex flex-col gap-6 py-6 h-full w-full mt-[25%] md:mt-[50px] md:ml-[30%] justify-center">
                 <div className="bg-white rounded-2xl max-w-6xl">

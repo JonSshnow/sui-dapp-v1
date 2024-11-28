@@ -4,6 +4,8 @@ import BasicContainer from "@/components/containers/basicContainer";
 import Footer from "@/components/footer";
 import SideBarLayout from "@/components/sidebar/sidebar-layout"
 import Header from "@/components/header";
+import Snowfall from "react-snowfall";
+
 
 
 /* const font = Raleway({ subsets: ["latin"] }); */
@@ -16,8 +18,8 @@ export default function Home() {
         /* font.className */
       )}
     >
-      <video autoPlay loop muted playsInline className="absolute w-full h-full bg-transparent object-cover z-[-1]"><source src="snowFall.mp4" type="video/mp4"></source></video>
-      <Header /> 
+    <Snowfall color="white" />  
+    <Header /> 
       <h1 className="absolute top-48 md:top-32 text-[#646262] text-3xl md:text-xl lg:text-6xl font-bold p-6">Welcome to Suitzerland</h1>
       <p className="flex flex-col justify-center w-[80%]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos est similique itaque quod ipsum maxime accusantium! Animi, recusandae, dolorum autem perspiciatis nemo sequi voluptatum velit provident delectus est nesciunt ipsam.</p>
     </main>
