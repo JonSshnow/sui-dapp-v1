@@ -71,7 +71,7 @@ const Header = () => {
             <li key={item.title}>
               <Link href={item.url}>
                 <div className="tooltip tooltip-bottom" data-tip={item.title}>
-                  <item.icon />
+                  <item.icon className="w-[35px] h-[35px]"/>
                 </div>
               </Link>
             </li>
