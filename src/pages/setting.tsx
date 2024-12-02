@@ -25,7 +25,7 @@ export default function Setting(){
         )}>
             <Snowfall color="white" snowflakeCount={200} />
             <Header />
-            <h1 className="absolute hidden text-[#646262] md:flex md:top-24 md:text-6xl font-bold p-6">Settings</h1>
+            <h1 className="absolute hidden text-[#646262] md:flex md:top-16 md:text-6xl font-bold p-6">Settings</h1>
             <div className="flex flex-col gap-6 justify-center h-full w-full mt-[-400px] md:mt-[0%]">
             <Card className="flex flex-col gap-4 bg-white w-[60%] max-w-6xl mx-auto">
                 <CardHeader>

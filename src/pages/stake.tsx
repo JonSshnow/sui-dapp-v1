@@ -18,7 +18,7 @@ export default function Stake() {
     > 
       <Snowfall color="white" snowflakeCount={200} />
       <Header />
-      <h1 className="absolute hidden text-[#646262] lg:flex lg:top-24 lg:text-6xl font-bold p-6">Stake</h1>
+      <h1 className="absolute hidden text-[#646262] lg:flex lg:top-16 lg:text-6xl font-bold p-6">Stake</h1>
       <div className="flex flex-col gap-6 justify-center h-full w-full xl:w-[1100px] mt-[25%] md:mt-[100px]">
           <Card className="flex flex-col gap-4 bg-white w-full max-w-6xl mx-auto">
             <CardContent>

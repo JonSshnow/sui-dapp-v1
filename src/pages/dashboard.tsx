@@ -15,11 +15,11 @@ export default function Dashboard(){
         )}>
             <Snowfall color="white" snowflakeCount={200} />
             <Header />
-            <h1 className="absolute hidden text-[#646262] lg:flex lg:top-24 lg:text-6xl font-bold p-6">Dashboard</h1>
+            <h1 className="absolute hidden text-[#646262] lg:flex lg:top-16 lg:text-6xl font-bold p-6">Dashboard</h1>
             {/* <BasicContainer/> */}
             <div className="flex flex-col gap-6 py-6 h-full w-full xl:w-[1500px] mt-[25%] md:mt-[50px] justify-center items-center">
                 <div className="bg-white rounded-2xl max-w-6xl">
-                    <div className="mx-auto max-w-7xl">
+                    <div className="mx-auto md:w-[1100px] max-w-7xl">
                         <div className="grid grid-cols-1 gap-px bg-[#646262]/5 sm:grid-cols-2 lg:grid-cols-4 rounded-2xl shadow-md">
                             <div className="bg-white px-4 py-6 sm:px-6 lg:px-8 rounded-t-2xl sm:rounded-t-none sm:rounded-tl-2xl lg:rounded-l-2xl">
                                 <p className="text-sm font-medium leading-6 text-gray-400 text-center sm:text-left">Market Cap</p>
@@ -50,7 +50,7 @@ export default function Dashboard(){
                     </div>
                 </div>
                 <div className="bg-white rounded-2xl max-w-6xl">
-                    <div className="mx-auto max-w-7xl">
+                    <div className="mx-auto md:w-[1100px] max-w-7xl">
                         <div className="grid grid-cols-1 gap-px bg-[#646262]/5 sm:grid-cols-1 lg:grid-cols-3 rounded-2xl shadow-md">
                             <div className="bg-white px-4 py-6 sm:px-6 lg:px-8 rounded-t-2xl sm:rounded-t-none sm:rounded-tl-2xl lg:rounded-l-2xl">
                                 <p className="text-sm font-medium leading-6 text-gray-400 text-center sm:text-left">Market Cap</p>
@@ -74,7 +74,7 @@ export default function Dashboard(){
                     </div>
                 </div>
                 <div className="bg-white rounded-2xl max-w-6xl">
-                    <div className="mx-auto max-w-7xl">
+                    <div className="mx-auto md:w-[1100px] max-w-7xl">
                         <div className="grid grid-cols-1 gap-px bg-[#646262]/5 sm:grid-cols-2 lg:grid-cols-2 rounded-2xl shadow-md">
                             <div className="bg-white px-4 py-6 sm:px-6 lg:px-8 rounded-t-2xl sm:rounded-t-none sm:rounded-tl-2xl lg:rounded-l-2xl">
                                 <p className="text-sm font-medium leading-6 text-gray-400 text-center sm:text-left">Market Cap</p>
