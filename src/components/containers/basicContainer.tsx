@@ -60,11 +60,9 @@ const BasicContainer = () => {
             },
           });
           toast.success("Tx Success!");
-          console.log(finalRes);
         },
         onError: (err) => {
           toast.error(err.message);
-          console.log(err);
         },
       },
     );

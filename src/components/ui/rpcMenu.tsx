@@ -60,7 +60,6 @@ const RpcMenu = () => {
         }),
       );
     } catch (ex) {
-      console.log("ex", ex);
       return undefined;
     }
   };
