@@ -13,28 +13,28 @@ import {
   } from "@/components/ui/sidebar"
 import { title } from "process"
 import Link from "next/link" 
-import { LayoutDashboardIcon, Layers, Settings, HouseIcon } from "lucide-react"
+import { LayoutDashboardIcon, Landmark, Info, ChartNoAxesCombined } from "lucide-react"
 
   const items = [
-    {
-      title: "Home",
-      url:"/",
-      icon : HouseIcon,
-    },
     {
       title: "Dashboard",
       url:"/dashboard",
       icon : LayoutDashboardIcon,
     },
     {
-      title: "Stake",
+      title: "Staking",
       url:"/stake",
-      icon : Layers,
+      icon : Landmark,
     },
     {
-      title: "Setting",
+      title: "Bonds",
+      url:"/bonds",
+      icon : ChartNoAxesCombined,
+    },
+    {
+      title: "About",
       url:"/setting",
-      icon : Settings,
+      icon : Info,
     },
   ]
  
@@ -52,7 +52,7 @@ import { LayoutDashboardIcon, Layers, Settings, HouseIcon } from "lucide-react"
       <Sidebar collapsible="icon">
         {useSidebar().state === 'expanded' && (
           <SidebarHeader>
-            <span className="text-xl lg:text-4xl font-extrabold mt-[10px] text-[#646262]">
+            <span className="text-xl lg:text-4xl font-bold mt-[10px] text-[#FFFFFF]">
               Suitzerland
             </span>
           </SidebarHeader>
@@ -64,7 +64,7 @@ import { LayoutDashboardIcon, Layers, Settings, HouseIcon } from "lucide-react"
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton className="focus:bg-[#4286F4] hover:ring hover:ring-white rounded-md active:ring active:ring-blue-600 active:bg-[#4286F4]" asChild>
                     <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
