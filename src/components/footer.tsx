@@ -18,7 +18,28 @@ const Footer = () => {
           height={50}
           priority={true}
         /> */}
-        <p className=" flex items-end justify-end bottom-0 pb-5 px-4">© 2024 - Suitzerland - All rights reserved - Privacy policies</p>
+        <div className="flex gap-5 items-end justify-end bottom-0 pb-5 px-4">
+          <a href="https://dexscreener.com/">Dex</a>
+          <a href="https://lytefinance.xyz/">
+            <Image className="self-center" src="/images/telegram-16.png"
+              alt="telegram_logo"
+              width={16}
+              height={16}
+              priority={true}
+            />
+          </a>
+          <a href="https://x.com/Suitzerland">
+          <Image className="self-center" src="/images/X_logo_2023_(white).png"
+              alt="x_logo"
+              width={16}
+              height={16}
+              priority={true}
+            />
+          </a>
+          <p className="text-sm">© 2024 - Suitzerland - All rights reserved - Privacy policies</p>
+        </div>
+        
+        
       </footer>
     </div>
   );

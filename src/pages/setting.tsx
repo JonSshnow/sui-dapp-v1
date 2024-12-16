@@ -2,17 +2,9 @@
 import { Inter, Raleway } from "next/font/google";
 import { cn } from "@/lib/utils";
 import SideBarLayout from "@/components/sidebar/sidebar-layout";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-  } from "@/components/ui/card"
 import Header from "@/components/header";
 import Snowfall from "react-snowfall";
-import { Info } from "lucide-react";
+import Image from "next/image";
   
 
 /* const font = Raleway({ subsets: ["latin"] }); */
@@ -25,8 +17,14 @@ export default function Setting(){
             /* font.className */
         )}>
             <SideBarLayout>
-                <Snowfall color="white" snowflakeCount={200} />
-                <h1 className="absolute text-[#FFFFFF] md:flex h-[53px] w-[173px] font-bold justify-center items-center"><Info/><span>About</span></h1>
+                {/* <Snowfall color="white" snowflakeCount={200} /> */}
+                <Image className="relative top-5 left-[780px] h-[53px]" 
+                    src="/images/About_title.png"
+                    alt="about_title"
+                    width={173}
+                    height={53}
+                    priority={true}
+                />                
                 <div className="flex flex-col gap-3 py-6 h-full w-full xl:w-[1500px] mt-[25%] md:mt-0 justify-center">
                     <h3 className="font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#6DD5FA] via-[#C7EEFC] to-[#6DD5FA]">The Project</h3>
                     <p className="text-left">

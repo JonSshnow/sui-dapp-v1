@@ -10,7 +10,7 @@ const ConnectWallet = () => {
   const { walletAddress, suiName } = useContext(AppContext);
 
   return (
-    <div className="absolute z-50 flex flex-wrap right-64 ">
+    <div className="absolute z-50 flex flex-wrap top-5 right-[50px]">
       {walletAddress ? (
         <ConnectMenu walletAddress={walletAddress} suiName={suiName} />
       ) : (

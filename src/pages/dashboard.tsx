@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import Snowfall from "react-snowfall";
 import SideBarLayout from "@/components/sidebar/sidebar-layout";
 import { LayoutDashboardIcon } from "lucide-react";
+import Image from "next/image";
   
 
 /* const font = Raleway({ subsets: ["latin"] }); */
@@ -16,11 +17,16 @@ export default function Dashboard(){
             /* font.className */
         )}>
             <SideBarLayout>
-                <Snowfall color="white" snowflakeCount={200} />
-                <h1 className="absolute text-[#FFFFFF] flex h-[53px] w-[252px] font-bold justify-center items-center"><LayoutDashboardIcon/><span>Dashboard</span></h1>
+                {/* <Snowfall color="white" snowflakeCount={200} /> */}
                 {/* <BasicContainer/> */}
+                <Image className="relative top-5 left-[780px] h-[53px]" src="/images/Dashboard_title.png"
+                              alt="dashboard_title"
+                              width={252}
+                              height={53}
+                              priority={true}
+                />
                 <div className="flex flex-col gap-6 py-6 h-full w-full xl:w-[1500px] mt-[25%] md:mt-0 justify-center items-center">
-                <div className="bg-[#666666] rounded-2xl max-w-6xl">
+                    <div className="bg-[#666666] rounded-2xl max-w-6xl">
                         <div className="mx-auto md:w-[1100px] max-w-7xl">
                             <div className="grid grid-cols-1 gap-px bg-[#666666]/5 sm:grid-cols-1 lg:grid-cols-3 rounded-2xl shadow-md">
                                 <div className="bg-gradient-to-b from-[#373B44] from-10% to-[#4286F4] to-90% px-4 py-6 sm:px-6 lg:px-8 rounded-t-2xl sm:rounded-t-none sm:rounded-tl-2xl lg:rounded-l-2xl">
@@ -92,6 +98,7 @@ export default function Dashboard(){
                             </div>                   
                         </div>
                     </div>
+                    <p className="text-center w-[800px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi adipisci soluta dicta voluptatem quae corporis cum, dolorum accusantium tempora. Nemo provident maiores eaque dicta? Quae et atque fuga asperiores quia.</p>
                 </div>
             </SideBarLayout>    
         </main>

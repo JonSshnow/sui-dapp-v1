@@ -2,6 +2,7 @@
 import {
     Sidebar,
     SidebarContent,
+    SidebarFooter,
     SidebarGroup,
     SidebarGroupContent,
     SidebarGroupLabel,
@@ -14,6 +15,8 @@ import {
 import { title } from "process"
 import Link from "next/link" 
 import { LayoutDashboardIcon, Landmark, Info, ChartNoAxesCombined } from "lucide-react"
+import { Progress } from "@/components/ui/progress"
+import Image from "next/image";
 
   const items = [
     {
@@ -52,9 +55,15 @@ import { LayoutDashboardIcon, Landmark, Info, ChartNoAxesCombined } from "lucide
       <Sidebar collapsible="icon">
         {useSidebar().state === 'expanded' && (
           <SidebarHeader>
-            <span className="text-xl lg:text-4xl font-bold mt-[10px] text-[#FFFFFF]">
+            <Image src="/images/Logo.png"
+              alt="suitzerland_logo"
+              width={183}
+              height={36}
+              priority={true}
+            />
+            {/* <span className="text-xl font-bold mt-[10px] text-[#FFFFFF]">
               Suitzerland
-            </span>
+            </span> */}
           </SidebarHeader>
         )}
         <SidebarContent>
@@ -75,8 +84,16 @@ import { LayoutDashboardIcon, Landmark, Info, ChartNoAxesCombined } from "lucide
             </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup> 
-          <SidebarGroup />
         </SidebarContent>
+        <SidebarFooter>
+          <SidebarGroup>
+            <SidebarGroupContent className="flex flex-col gap-2">
+              <Progress value={30}/>
+              <Progress value={50}/>
+              <Progress value={70}/>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        </SidebarFooter>
       </Sidebar>
     )
   }
