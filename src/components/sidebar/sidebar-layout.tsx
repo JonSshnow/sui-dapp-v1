@@ -10,7 +10,7 @@ export default function SideBarLayout({ children }: { children: React.ReactNode 
       <AppSidebar /> 
       <SidebarTrigger className="text-[#646262]" />
         <ConnectWallet/>
-        <div className="flex">
+        <div className="flex flex-col w-full h-full">
           {children}
         </div>
         

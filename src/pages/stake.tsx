@@ -6,6 +6,8 @@ import Header from "@/components/header";
 import Snowfall from "react-snowfall";
 import SideBarLayout from "@/components/sidebar/sidebar-layout";
 import Image from "next/image";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 
 /* const font = Raleway({ subsets: ["latin"] }); */
@@ -20,117 +22,92 @@ export default function Stake() {
     >
       <SideBarLayout>
         <Snowfall color="white" snowflakeCount={200} />
-        <Image className="relative top-5 left-[780px] h-[53px]" 
+        <Image className="relative top-5 left-[450px] 2xl:left-[700px] h-[53px]" 
           src="/images/Staking_title.png"
           alt="staking_title"
           width={196}
           height={53}
           priority={true}
         />
-        <div className="flex flex-col gap-6 py-6 h-full w-full xl:w-[1100px] mt-[25%] md:mt-0 justify-center">
-          <Card className="flex flex-col gap-4 bg-white w-full max-w-6xl mx-auto">
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-                <div className="text-center">
-                  <p className="text-xs text-gray-400">Test</p>
-                  <p className="text-4xl font-semibold text-[#70bbc9]">%</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-xs text-gray-400">Test</p>
-                  <p className="text-4xl font-semibold text-[#70bbc9]">%</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-xs text-gray-400">Test</p>
-                  <p className="text-4xl font-semibold text-[#70bbc9]">%</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+        <div className="flex flex-col gap-6 py-6 h-full w-full mt-[150px] justify-center items-center">
+          <div className="bg-[#666666] rounded-2xl max-w-6xl">
+            <div className="mx-auto w-[750px] 2xl:w-[1500px] max-w-7xl">
+                <div className="grid grid-cols-1 gap-px bg-[#666666]/5 sm:grid-cols-1 lg:grid-cols-3 rounded-2xl shadow-md">
+                    <div className="bg-gradient-to-b from-[#373B44] from-10% to-[#4286F4] to-90% px-4 py-6 sm:px-6 lg:px-8 rounded-t-2xl sm:rounded-t-none sm:rounded-tl-2xl lg:rounded-l-2xl">
+                        <p className="text-sm font-medium leading-6 text-white text-left">$stz price</p>
+                        <p className="mt-2 flex items-baseline gap-x-2 justify-start">
+                            <span className="text-4xl font-semibold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-[#6DD5FA] via-[#C7EEFC] to-[#6DD5FA]">$0</span>
+                        </p>
+                    </div>
+                    <div className="bg-gradient-to-b from-[#373B44] from-10% to-[#4286F4] to-90% px-4 py-6 sm:px-6 lg:px-8 sm:rounded-tr-2xl lg:rounded-none">
+                        <p className="text-sm font-medium leading-6 text-white text-center">Marketcap</p>
+                        <p className="mt-2 flex items-baseline gap-x-2 justify-center">
+                            <span className="text-4xl font-semibold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-[#6DD5FA] via-[#C7EEFC] to-[#6DD5FA]">$0</span>
+                        </p>
+                    </div>
+                    <div className="bg-gradient-to-b from-[#373B44] from-10% to-[#4286F4] to-90% px-4 py-6 sm:px-6 lg:px-8 rounded-b-2xl sm:rounded-b-none sm:rounded-br-2xl lg:rounded-r-2xl">
+                        <p className="text-sm font-medium leading-6 text-white text-right">Total value locked</p>
+                        <p className="mt-2 flex items-baseline gap-x-2 justify-end">
+                            <span className="text-4xl font-semibold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-[#6DD5FA] via-[#C7EEFC] to-[#6DD5FA]">$0</span>
+                        </p>
+                    </div>
+                </div>                   
+            </div>
+          </div>
 
-          <div className="flex flex-col lg:flex-row gap-6">
-            <Card className="flex flex-col bg-white w-full max-w-3xl mx-auto">
-              <CardHeader>
-                <CardTitle className="text-2xl md:text-3xl font-semibold text-[#646262]">
-                  SUI Staking
-                </CardTitle>
-                <CardDescription className="text-sm text-gray-400">
-                  Whatever time you want
-                </CardDescription>
-              </CardHeader>
+          <div className="flex flex-col lg:flex-row gap-6 w-[750px]">
+            <Card className="flex flex-col bg-gradient-to-b from-[#373B44] from-10% to-[#4286F4] to-90% w-full max-w-3xl mx-auto">
               <CardContent>
-                <Tabs defaultValue="account" className="w-full">
-                  <TabsList className="flex justify-center gap-4 text-[#646262]">
-                    <TabsTrigger value="stake" className="text-lg bg-gray-100 w-[100px] hover:bg-cyan-100 active:bg-cyan-300 active:ring active:ring-cyan-400 focus:bg-gray-300 rounded-full">
-                      Stake
-                    </TabsTrigger>
-                    <TabsTrigger value="reward" className="text-lg bg-gray-100 w-[100px] hover:bg-cyan-100 active:bg-cyan-300 active:ring active:ring-cyan-400 focus:bg-gray-300 rounded-full">
-                      Reward
-                    </TabsTrigger>
-                    <TabsTrigger value="compound" className="text-md bg-gray-100 w-[100px] hover:bg-cyan-100 active:bg-cyan-300 active:ring active:ring-cyan-400 focus:bg-gray-300 rounded-full">
-                      Compound
-                    </TabsTrigger>
-                  </TabsList>
-                  <div className="mt-4">
-                    <TabsContent value="stake">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </TabsContent>
-                    <TabsContent value="reward">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </TabsContent>
-                    <TabsContent value="compound">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit1.
-                    </TabsContent>
-                  </div>
-                </Tabs>
-              </CardContent>
-              <CardFooter className="flex justify-center text-sm text-gray-400 mt-3">
-                Connect to your wallet to stake SUI tokens!
-              </CardFooter>
-            </Card>
-            <Card className="bg-white w-full max-w-xl mx-auto">
-              <CardHeader>
-                <CardTitle className="text-[#646262] font-bold">Balances</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="mb-4 flex items-center justify-between gap-2">
-                  <div className="text-gray-400">Your Balance</div>
-                  <div className="whitespace-nowrap text-right text-[#646262] font-bold">
-                    0<span className="font-normal text-[#70bbc9]"> $STZ</span>
-                  </div>
+                <div className="px-2 py-2 w-full">
+                    <p className="text-sm font-bold leading-6 text-white text-start">$stz balance</p>
+                    <p className="mt-2 flex items-baseline gap-x-2 justify-start">
+                        <span className="text-4xl font-semibold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-[#6DD5FA] via-[#C7EEFC] to-[#6DD5FA]">0 $stz</span>
+                    </p>
                 </div>
-                <div className="mb-4 flex items-center justify-between gap-2">
-                  <div className="text-gray-400">Your Staked Balance</div>
-                  <div className="whitespace-nowrap text-right text-[#646262] font-bold">
-                    0<span className="font-normal text-[#70bbc9]"> $STZ</span>
-                  </div>
+                <div className="px-2 py-2 w-full">
+                    <p className="text-sm font-bold leading-6 text-white text-start">Stacked balance</p>
+                    <p className="mt-2 flex items-baseline gap-x-2 justify-start">
+                        <span className="text-4xl font-semibold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-[#6DD5FA] via-[#C7EEFC] to-[#6DD5FA]">0 $stz</span>
+                    </p>
                 </div>
-                <div className="mb-4 flex items-center justify-between gap-2">
-                  <div className="text-gray-400">Next Epoch Reward</div>
-                  <div className="whitespace-nowrap text-right text-[#646262] font-bold">
-                    0<span className="font-normal text-[#70bbc9]"> $STZ</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between gap-2">
-                  <div className="text-gray-400">Next Epoch Yield</div>
-                  <div className="whitespace-nowrap text-right text-[#646262] font-bold">
-                    0<span className="text-[#70bbc9] font-normal">%</span>
-                  </div>
-                </div>
-                <Separator className="my-6 text-gray-800" />
-                <div className="mb-4 flex items-center justify-between gap-2">
-                  <div className="text-gray-400">Claimed Rewards</div>
-                  <div className="whitespace-nowrap text-right text-[#646262] font-bold">
-                    0<span className="text-[#70bbc9] font-normal"> $STZ</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between gap-2">
-                  <div className="text-gray-400">Lock time remaining</div>
-                  <div className="whitespace-nowrap text-right text-[#646262] font-bold">
-                    No Lyte Stacked
-                  </div>
+                <div className="px-2 py-2 w-full">
+                    <p className="text-sm font-bold leading-6 text-white text-start">Claimable balance</p>
+                    <p className="mt-2 flex items-baseline gap-x-2 justify-start">
+                        <span className="text-4xl font-semibold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-[#6DD5FA] via-[#C7EEFC] to-[#6DD5FA]">0 $stz</span>
+                    </p>
                 </div>
               </CardContent>
             </Card>
+            <Card className="bg-gradient-to-b from-[#90D5FF] from-10% to-[#4286F4] to-90% h-[170px]">
+                <CardHeader>
+                    <CardTitle className="text-md font-bold">Stake</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col gap-2">
+                    <div className="flex w-full max-w-sm items-center space-x-2">
+                        <Input type="number" placeholder="$stz" className="bg-slate-300/50  text-white active:ring-1 active:ring-white hover:ring-1 hover:ring-white "/>
+                        <Button className="bg-slate-300/50 text-white ring-1 ring-white active:opacity-50 hover:opacity-50">Max</Button>
+                    </div>
+                    <div className="flex w-full items-center gap-3">
+                        <Button className="text-white bg-[#373B44] active:opacity-50 hover:opacity-50">Stake</Button>
+                        <Button className="text-white bg-[#373B44] active:opacity-50 hover:opacity-50">Unstake</Button>
+                        <Button className="text-white bg-[#373B44] active:opacity-50 hover:opacity-50">Compound</Button>
+                    </div>  
+                </CardContent>
+            </Card>
+            <div className="flex flex-col gap-5 h-full">
+              <Card className="bg-gradient-to-b from-[#373B44] from-10% to-[#4286F4] to-90% w-full max-w-xl mx-auto h-[190px]">
+                <CardHeader>
+                  <CardTitle className="text-white font-bold">Daily Rewards</CardTitle>
+                </CardHeader>
+                <CardContent>
+                <p className="mt-2 flex items-baseline gap-x-2 justify-start">
+                    <span className="text-4xl font-semibold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-[#6DD5FA] via-[#C7EEFC] to-[#6DD5FA]">0 $stz</span>
+                </p>
+                </CardContent>
+              </Card>
+              <Button className="bg-gradient-to-l from-[#90D5FF] from-10% to-[#4286F4] to-90% h-[50px] text-white ring-1 ring-white active:opacity-50 hover:opacity-50">Claim</Button>
+            </div>
+            
           </div>
         </div>
       </SideBarLayout> 

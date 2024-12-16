@@ -68,15 +68,14 @@ import Image from "next/image";
         )}
         <SidebarContent>
           <SidebarGroup>
-            <SidebarGroupLabel>Menu</SidebarGroupLabel>
             <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="flex flex-col items-center mt-[25px] gap-5">
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton className="focus:bg-[#4286F4] hover:ring hover:ring-white rounded-md active:ring active:ring-blue-600 active:bg-[#4286F4]" asChild>
+                  <SidebarMenuButton className="w-full focus:bg-[#4286F4] hover:ring hover:ring-white rounded-md active:ring active:ring-blue-600 active:bg-[#4286F4]" asChild>
                     <Link href={item.url}>
                       <item.icon />
-                      <span>{item.title}</span>
+                      <span className="text-xl">{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

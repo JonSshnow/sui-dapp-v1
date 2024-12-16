@@ -18,14 +18,14 @@ export default function Setting(){
         )}>
             <SideBarLayout>
                 {/* <Snowfall color="white" snowflakeCount={200} /> */}
-                <Image className="relative top-5 left-[780px] h-[53px]" 
+                <Image className="relative top-5 left-[450px] 2xl:left-[700px] h-[53px]" 
                     src="/images/About_title.png"
                     alt="about_title"
                     width={173}
                     height={53}
                     priority={true}
                 />                
-                <div className="flex flex-col gap-3 py-6 h-full w-full xl:w-[1500px] mt-[25%] md:mt-0 justify-center">
+                <div className="flex flex-col gap-3 py-6 h-[1100px] w-[1100px] 2xl:w-[1500px] justify-start items-start">
                     <h3 className="font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#6DD5FA] via-[#C7EEFC] to-[#6DD5FA]">The Project</h3>
                     <p className="text-left">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
