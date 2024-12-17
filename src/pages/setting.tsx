@@ -17,7 +17,7 @@ export default function Setting(){
             /* font.className */
         )}>
             <SideBarLayout>
-                {/* <Snowfall color="white" snowflakeCount={200} /> */}
+                <Snowfall color="white" snowflakeCount={200} />
                 <Image className="relative top-5 left-[450px] 2xl:left-[700px] h-[53px]" 
                     src="/images/About_title.png"
                     alt="about_title"

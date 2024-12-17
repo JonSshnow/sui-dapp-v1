@@ -87,9 +87,9 @@ import Image from "next/image";
         <SidebarFooter>
           <SidebarGroup>
             <SidebarGroupContent className="flex flex-col gap-2">
-              <Progress value={30}/>
-              <Progress value={50}/>
-              <Progress value={70}/>
+              <Progress value={30} title="Next Epoch Yield: 12:33:10" />
+              <Progress value={50} title="Next Epoch Reward: 12:33:10" />
+              <Progress value={70} title="Claimable Reward: 213.2k $stz" />
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarFooter>

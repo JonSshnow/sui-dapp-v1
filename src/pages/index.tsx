@@ -5,6 +5,8 @@ import Footer from "@/components/footer";
 import SideBarLayout from "@/components/sidebar/sidebar-layout"
 import Header from "@/components/header";
 import Snowfall from "react-snowfall";
+import Image from "next/image";
+
 
 
 
@@ -15,14 +17,18 @@ export default function Home() {
     
     <main
       className={cn(
-        "relative w-full min-h-svh h-full max-w-360 flex flex-col items-center justify-center mx-auto py-5 px-4 bg-gradient-to-r from-[#fbfdf3] to-[#8dd8e6]",
+        "relative w-full min-h-svh h-full max-w-360 flex flex-col items-center justify-center mx-auto py-5 px-4 bg-gradient-to-b from-[#242424] from-10% to-[#000000] to-90%",
         /* font.className */
       )}
     >
       <SideBarLayout>
         <Snowfall color="white" snowflakeCount={200} />   
-        <h1 className="absolute top-48 md:top-32 text-[#646262] text-3xl md:text-4xl lg:text-6xl font-bold p-6">Welcome to Suitzerland</h1>
-        <p className="flex flex-col justify-center w-[80%]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos est similique itaque quod ipsum maxime accusantium! Animi, recusandae, dolorum autem perspiciatis nemo sequi voluptatum velit provident delectus est nesciunt ipsam.</p>
+        <Image className="self-center mt-[250px]" src="/images/home_page.png"
+              alt="home_logo"
+              width={755}
+              height={309}
+              priority={true}
+            />
       </SideBarLayout>
         </main>
   );

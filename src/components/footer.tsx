@@ -19,7 +19,14 @@ const Footer = () => {
           priority={true}
         /> */}
         <div className="flex gap-5 items-end justify-end bottom-0 pb-5 px-4">
-          <a href="https://dexscreener.com/">Dex</a>
+          <a href="https://dexscreener.com/">
+          <Image className="self-center" src="/images/dex-screener-seeklogo.png"
+              alt="dex_logo"
+              width={16}
+              height={16}
+              priority={true}
+            />
+          </a>
           <a href="https://lytefinance.xyz/">
             <Image className="self-center" src="/images/telegram-16.png"
               alt="telegram_logo"

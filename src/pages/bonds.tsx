@@ -16,7 +16,7 @@ export default function Bonds(){
             /* font.className */
         )}>
             <SideBarLayout>
-                {/* <Snowfall color="white" snowflakeCount={200} /> */}
+                <Snowfall color="white" snowflakeCount={200} />
                 <Image className="relative top-5 left-[450px] 2xl:left-[700px] h-[53px]" 
                     src="/images/Bonds_title.png"
                     alt="Bonds_title"

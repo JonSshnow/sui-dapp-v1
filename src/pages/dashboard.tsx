@@ -17,7 +17,7 @@ export default function Dashboard(){
             /* font.className */
         )}>
             <SideBarLayout>
-                {/* <Snowfall color="white" snowflakeCount={200} /> */}
+                <Snowfall color="white" snowflakeCount={200} />
                 {/* <BasicContainer/> */}
                 <Image className="relative top-5 left-[420px] 2xl:left-[700px] h-[53px]" src="/images/Dashboard_title.png"
                               alt="dashboard_title"
