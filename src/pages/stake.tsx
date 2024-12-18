@@ -22,7 +22,7 @@ export default function Stake() {
     >
       <SideBarLayout>
         <Snowfall color="white" snowflakeCount={200} />
-        <Image className="relative top-5 left-[450px] 2xl:left-[700px] h-[53px]" 
+        <Image className="relative top-5 left-[450px] 3xl:left-[700px] h-[53px]" 
           src="/images/Staking_title.png"
           alt="staking_title"
           width={196}
@@ -31,7 +31,7 @@ export default function Stake() {
         />
         <div className="flex flex-col gap-6 py-6 h-full w-full mt-[150px] justify-center items-center">
           <div className="bg-[#666666] rounded-2xl max-w-6xl">
-            <div className="mx-auto w-[750px] 2xl:w-[1500px] max-w-7xl">
+            <div className="mx-auto w-[750px] 3xl:w-[1500px] max-w-7xl">
                 <div className="grid grid-cols-1 gap-px bg-[#666666]/5 sm:grid-cols-1 lg:grid-cols-3 rounded-2xl shadow-md">
                     <div className="bg-gradient-to-b from-[#373B44] from-10% to-[#4286F4] to-90% px-4 py-6 sm:px-6 lg:px-8 rounded-t-2xl sm:rounded-t-none sm:rounded-tl-2xl lg:rounded-l-2xl">
                         <p className="text-sm font-medium leading-6 text-white text-left">$stz price</p>
